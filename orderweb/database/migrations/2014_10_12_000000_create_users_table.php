@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name')->comment('nombre de usuario');
             $table->string('email')->unique()->comment('correo unico');
             $table->string('password')->comment('contraseña de acceso');
-            $table->foreignId('role,id')-> constrained('role')
+            $table->foreignId('role_id')-> constrained('role')
                     ->onDelete('cascade')
                     ->onUpdate('cascade');
             $table->rememberToken()->comment('token recuperacion contraseña');
