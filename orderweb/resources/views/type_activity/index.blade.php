@@ -1,11 +1,11 @@
 @extends('templates.base')
-@section('title', 'Listado causales')
-@section('header', 'Listado causales')
+@section('title', 'Listado tipo de actividades')
+@section('header', 'Listado tipo de actividades')
 @section('content')
   
     <div class="row">
         <div class="col-lg-12 mb-4 d-grip gap-2 d-md-block">
-            <a href="{{ route('causal.create') }}" class="btn btn-primary">Crear</a>
+            <a href="{{ route('type_activity.create') }}" class="btn btn-primary">Crear</a>
         </div>
     </div>
 
@@ -22,8 +22,8 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>1</td>
-                    <td>Causal de prueba</td>
+                    <td>1 type activity</td>
+                    <td>actividad de prueba</td>
                     <td>
                         <a href="#" title="editar" class="btn btn-info btn-circle btn-sm">
                             <i class="far fa-edit"></i>

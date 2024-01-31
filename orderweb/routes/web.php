@@ -28,3 +28,46 @@ Route::get('/causal/create', function () {
 Route::get('/causal/index', function () {
     return view('causal.index');
 })->name('causal.index');
+Route::get('/observation/create', function () {
+    return view('observation.create');
+})->name('observation.create');
+
+Route::get('/observation/index', function () {
+    return view('observation.index');
+})->name('observation.index');
+
+Route::get('/type_activity/create', function () {
+    return view('type_activity.create');
+})->name('type_activity.create');
+
+Route::get('/type_activity/index', function () {
+    return view('type_activity.index');
+})->name('type_activity.index');
+
+//nruta para activity
+Route::get('/activity/create', function () {
+    return view('activity.create');
+})->name('activity.create');
+
+Route::get('/activity/index', function () {
+    return view('activity.index');
+})->name('activity.index');
+
+//nruta para Tecnicos
+Route::get('/technician/create', function () {
+    return view('technician.create');
+})->name('technician.create');
+
+Route::get('/technician/index', function () {
+    return view('technician.index');
+})->name('technician.index');
+
+//nruta para ordenes
+Route::get('/order/create', function () {
+    return view('order.create');
+})->name('order.create');
+
+Route::get('/order/index', function () {
+    return view('order.index');
+})->name('order.index');
+
