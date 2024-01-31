@@ -14,13 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('test');
-})->name('test');
+    return view('index');
+})->name('index');
 
 Route::get('/test2', function () {
     return view('test2');
 })->name('test2');
-
+// ruta para causal
 Route::get('/causal/create', function () {
     return view('causal.create');
 })->name('causal.create');
@@ -28,14 +28,24 @@ Route::get('/causal/create', function () {
 Route::get('/causal/index', function () {
     return view('causal.index');
 })->name('causal.index');
+Route::get('/causal/edit', function () {
+    return view('causal.edit');
+})->name('causal.edit');
+
+//ruta para oservation
 Route::get('/observation/create', function () {
     return view('observation.create');
 })->name('observation.create');
+
+Route::get('/observation/edit', function () {
+    return view('observation.edit');
+})->name('observation.edit');
 
 Route::get('/observation/index', function () {
     return view('observation.index');
 })->name('observation.index');
 
+//ruta para type]_activity
 Route::get('/type_activity/create', function () {
     return view('type_activity.create');
 })->name('type_activity.create');
@@ -43,6 +53,10 @@ Route::get('/type_activity/create', function () {
 Route::get('/type_activity/index', function () {
     return view('type_activity.index');
 })->name('type_activity.index');
+
+Route::get('/type_activity/edit', function () {
+    return view('type_activity.edit');
+})->name('type_activity.edit');
 
 //nruta para activity
 Route::get('/activity/create', function () {
@@ -53,6 +67,10 @@ Route::get('/activity/index', function () {
     return view('activity.index');
 })->name('activity.index');
 
+Route::get('/activity/edit', function () {
+    return view('activity.edit');
+})->name('activity.edit');
+
 //nruta para Tecnicos
 Route::get('/technician/create', function () {
     return view('technician.create');
@@ -62,6 +80,9 @@ Route::get('/technician/index', function () {
     return view('technician.index');
 })->name('technician.index');
 
+Route::get('/technician/edit', function () {
+    return view('technician.edit');
+})->name('technician.edit');
 //nruta para ordenes
 Route::get('/order/create', function () {
     return view('order.create');
@@ -70,4 +91,9 @@ Route::get('/order/create', function () {
 Route::get('/order/index', function () {
     return view('order.index');
 })->name('order.index');
+
+Route::get('/order/edit', function () {
+    return view('order.edit');
+})->name('order.edit');
+
 
