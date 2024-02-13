@@ -29,8 +29,8 @@
                     <td>{{ $activity['id'] }}</td>
                     <td>{{ $activity['description'] }}</td>
                     <td>{{ $activity['hours'] }}</td>
-                    <td>{{ $activity['technician_id'] }}</td>
-                    <td>{{ $activity['type_id'] }}</td>
+                    <td>{{ $activity->technician->document }} - {{ $activity->technician->name }}</td>
+                    <td>{{ $activity->type_activity->description }}</td>
                     <td>
                         <a href="{{ route('activity.edit', $activity['id']) }}" title="editar" class="btn btn-info btn-circle btn-sm">
                             <i class="far fa-edit"></i>

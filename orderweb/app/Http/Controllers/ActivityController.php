@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Activity;
+use App\Models\Technician;
+use App\Models\TypeActivity;
 use Illuminate\Http\Request;
 
 class ActivityController extends Controller
@@ -22,7 +24,9 @@ class ActivityController extends Controller
      */
     public function create()
     {
-        //
+        $technicians = Technician::all();
+        $types = TypeActivity::all();
+        return view('activity.create', compact('technicians', 'types'));
     }
 
     /**
@@ -48,7 +52,17 @@ class ActivityController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $activity = Activity::find($id);
+        if($activity)
+        {
+
+        $technicians = Technician::all();
+        $types = TypeActivity::all();
+        return view('activity.edit', compact('activity', 'technicians', 'types'));
+        }
+
+        session()->flash('warning', 'No se encuntra el registro solicitado');
+        return redirect()->route('activity.index');
     }
 
     /**

@@ -5,13 +5,14 @@
     @include('templates.messages')
     <div class="row">
         <div class="col-lg-12 mb-4">
-            <form action="{{ route('activity.index') }}" method="POST">
+            <form action="{{ route('activity.store') }}" method="POST">
                 @csrf
                 <div class="row form-group">
                     <div class="col-lg-6 mb-4">
                         <label for="description">Descripcion</label>
                         <input type="text" class="form-control"
-                         id="description" name="description" required>
+                         id="description" name="description" required
+                         value="">
                     </div>
                     <div class="col-lg-6 mb-4">
                         <label for="hours">Horas estimadas</label>
@@ -24,6 +25,12 @@
                         <label for="technician_id">Tecnico</label>
                         <select name="technician_id" id="technician_id" class="form-control" required>
                             <option value="">Seleccione</option>
+                            @foreach($technicians as $technician)
+                            <option value="{{ $technician['document'] }}">
+                            {{ $technician['name'] }}
+                            </option>
+
+                            @endforeach
                         </select>
                     </div>
                 
@@ -31,6 +38,12 @@
                         <label for="type_id">Tipo</label>
                         <select name="type_id" id="type_id" class="form-control" required>
                             <option value="">Seleccione</option>
+                            @foreach($types as $type)
+                            <option value="{{ $type['id'] }}">
+                            {{ $type['description'] }}
+                            </option>
+
+                            @endforeach
                         </select>
                     </div>
                 </div>
