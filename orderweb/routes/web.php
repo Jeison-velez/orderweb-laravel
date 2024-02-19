@@ -27,6 +27,7 @@ Route::get('/', function () {
 Route::get('/test2', function () {
     return view('test2');
 })->name('test2');
+
 // ruta para causal
 Route::prefix('causal')->group(function(){
     Route::get('/index', [CausalController::class, 'index'])->name('causal.index');
@@ -88,7 +89,7 @@ Route::prefix('order')->group(function(){
     Route::post('/create', [OrderController::class, 'store'])->name('order.store');
     Route::put('/edit/{id}', [OrderController::class, 'update'])->name('order.update');
     Route::get('/destroy/{id}', [OrderController::class, 'destroy'])->name('order.destroy');
-    Route::get('/add_activity/{order_id}/{activity_iid}', [OrderController::class, 'add_activity'])->name('order.add_activity');
-    Route::get('/remove_activity/{order_id}/{activity_iid}', [OrderController::class, 'remove_activity'])->name('order.remove_activity');
+    Route::get('/add_activity/{order_id}/{activity_id}', [OrderController::class, 'add_activity'])->name('order.add_activity');
+    Route::get('/remove_activity/{order_id}/{activity_id}', [OrderController::class, 'remove_activity'])->name('order.remove_activity');
 });
 

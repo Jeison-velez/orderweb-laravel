@@ -16,12 +16,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        /*$this->call(RoleSeeder::class);
-        $this->call(CausalSeeder::class);
-        $this->call(ObservationSeeder::class);
-        $this->call(TypeActivitySeeder::class);
+       //$this->call(RoleSeeder::class);
+       //$this->call(CausalSeeder::class);
+       //$this->call(ObservationSeeder::class);
+       //$this->call(TypeActivitySeeder::class);
         
-        //Se crea un usuario con rol administrador
+        /*Se crea un usuario con rol administrador
         user::factory()->create([
             'role_id' => 1
         ]);
@@ -45,10 +45,10 @@ class DatabaseSeeder extends Seeder
 
         Technician::factory(2)->create([]);*/
 
-        /*$this->call(TestTechnicianSeeder::class);*/
+        //$this->call(TestTechnicianSeeder::class);
         //$this->call(TestActivityseeder::class);
         //$this->call((TestOrderseeder::class));
-        $this->call(TestOrderActivityseeder::class);
+        //$this->call(TestOrderActivityseeder::class);
 
     }
 }

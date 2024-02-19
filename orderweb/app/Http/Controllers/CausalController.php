@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class CausalController extends Controller
 {
+    private $rules = [
+        'description' => 'required|string|max:100|min:3',
+    ];
+
+
     /**
      * Display a listing of the resource.
      */
@@ -30,6 +35,9 @@ class CausalController extends Controller
      */
     public function store(Request $request)
     {
+        
+        
+        
         $causal = Causal::create($request->all());
         session()->flash('message', 'Registro creado exitosamente');
         return redirect()->route('causal.index');
