@@ -18,7 +18,7 @@ class ActivityController extends Controller
     ];
 
     private $traductionAtributes = [
-        'description' => 'description',
+        'description' => 'descripcion',
         'hours' => 'horas',
         'technician_id' => 'tecnico',
         'type_id' => 'tipo'
