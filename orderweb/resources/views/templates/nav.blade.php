@@ -27,6 +27,9 @@
             <div class="sidebar-heading">
                 Ordenes
             </div>
+            @can('admin-supervisor')
+                
+            
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
@@ -42,7 +45,10 @@
                     </div>
                 </div>
             </li> 
-
+            @endcan
+            @can('administrador')
+                
+          
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse2"
                    aria-expanded="true" aria-controls="collapse2">
@@ -56,6 +62,7 @@
                     </div>
                 </div>
             </li> 
+            
 
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse3"
@@ -70,6 +77,7 @@
                     </div>
                 </div>
             </li>
+            @endcan
 
             <!-- Divider -->
             <hr class="sidebar-divider"/>
@@ -78,6 +86,9 @@
             <div class="sidebar-heading">
                 Actividades
             </div>
+            @can('admin-supervisor')
+                
+            
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
@@ -93,6 +104,10 @@
                     </div>
                 </div>
             </li>
+            @endcan
+            @can('administrador')
+                
+           
 
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse5"
@@ -107,10 +122,13 @@
                     </div>
                 </div>
             </li>
+            @endcan
 
             <!-- Divider -->
             <hr class="sidebar-divider"/>
-
+            @can('supervisor')
+                
+            
             <!-- Heading -->
             <div class="sidebar-heading">
                 Técnicos
@@ -129,6 +147,25 @@
                     </div>
                 </div>
             </li>
+            @endcan
+            @can('administrador')
+            <div class="sidebar-heading">
+                Reportes
+            </div>  
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse7"
+                   aria-expanded="true" aria-controls="collapse7">
+                    <i class="fas fa-fw fa-wrench"></i>
+                    <span>Reportes</span>
+                </a>
+                <div id="collapse7" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="{{ route('reports.index') }}">Consultar</a>
+
+                    </div>
+                </div>
+            </li>
+            @endcan
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block" />

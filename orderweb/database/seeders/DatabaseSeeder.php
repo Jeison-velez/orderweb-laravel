@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
        //$this->call(ObservationSeeder::class);
        //$this->call(TypeActivitySeeder::class);
         
-        /*Se crea un usuario con rol administrador
+        //Se crea un usuario con rol administrador
         user::factory()->create([
             'role_id' => 1
         ]);
@@ -43,12 +43,12 @@ class DatabaseSeeder extends Seeder
             'especiality' => 'Lectura de redes'
         ]);
 
-        Technician::factory(2)->create([]);*/
+        Technician::factory(2)->create([]);
 
         //$this->call(TestTechnicianSeeder::class);
         //$this->call(TestActivityseeder::class);
         //$this->call((TestOrderseeder::class));
         //$this->call(TestOrderActivityseeder::class);
-
+//
     }
 }
