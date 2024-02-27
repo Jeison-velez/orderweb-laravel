@@ -110,5 +110,7 @@ Route::middleware('auth', 'can:admin-supervisor')->prefix('order')->group(functi
 Route::middleware('auth', 'can:administrador')->prefix('reports')->group(function(){
     Route::get('/index', [ ReportController::class, 'index'])->name('reports.index');
     Route::get('/export_technicians', [ ReportController::class, 'export_technicians'])->name('reports.technicians');
-
+    Route::get('/export_users', [ ReportController::class, 'export_users'])->name('reports.users');
+    Route::post('/export_activities_by_technician', [ ReportController::class, 'export_activities_by_technician'])->name('reports.activities_technician');
+    Route::post('/export_orders_by_legalization_date', [ ReportController::class, 'export_orders_by_legalization_date'])->name('reports.export_orders_by_legalization_date');
 });

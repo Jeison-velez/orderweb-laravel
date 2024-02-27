@@ -10,9 +10,24 @@ body{
     border-color: white;
 }
 
+#ReportTableInfo{
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 12px;
+    border: 0;
+   
+}
+
 #ReportTable td, #ReportTable th {
     border: 1px solid;
     border-color: white;
+    padding: 8px;
+    text-align: center;
+
+}
+
+#ReportTableInfo td, #ReportTableInfo th {
+    border: 0px;
     padding: 8px;
     text-align: center;
 

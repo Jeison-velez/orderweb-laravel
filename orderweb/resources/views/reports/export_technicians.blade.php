@@ -1,8 +1,8 @@
 @extends('templates.base_reports')
-@section('header', Reporte general de tecnicos)
+@section('header, Reporte general de tecnicos')
 @section('content')
     <section id="results">
-        @if ($technicians)   
+        @if($technicians)   
         <table id="ReportTable">
             <thead>
                 <tr>

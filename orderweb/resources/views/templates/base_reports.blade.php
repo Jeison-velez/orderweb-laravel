@@ -9,7 +9,7 @@
         <table width="100%" style="border-collapse: collapse; border: 1px solid;">
                 <th>
                    <div style="text-align: center">
-                    <img src="{{ asset('img/logo.png') }}" alt="logo">
+                    <img src="{{ asset('img/logo.jpg') }}" alt="logo">
 
                     </div> 
                 </th>
